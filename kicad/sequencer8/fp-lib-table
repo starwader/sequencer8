@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name sequencer8)(type KiCad)(uri ${KIPRJMOD}/sequencer8.pretty)(options "")(descr ""))
+)

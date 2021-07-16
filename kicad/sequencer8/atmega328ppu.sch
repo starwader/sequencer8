@@ -1,0 +1,243 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATmega:ATmega328P-PU U1
+U 1 1 60EC715A
+P 3450 2600
+F 0 "U1" H 2806 2646 50  0000 R CNN
+F 1 "ATmega328P-PU" H 2806 2555 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 3450 2600 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3450 2600 50  0001 C CNN
+	1    3450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4001 D1
+U 1 1 60ECC51F
+P 1000 1100
+F 0 "D1" H 1000 883 50  0000 C CNN
+F 1 "1N4001" H 1000 974 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 1000 925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1000 1100 50  0001 C CNN
+	1    1000 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 60ECDBFF
+P 600 1150
+F 0 "#PWR?" H 600 1000 50  0001 C CNN
+F 1 "+12V" H 615 1323 50  0000 C CNN
+F 2 "" H 600 1150 50  0001 C CNN
+F 3 "" H 600 1150 50  0001 C CNN
+	1    600  1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 60ED942E
+P 4600 2000
+F 0 "Y1" H 4600 2268 50  0000 C CNN
+F 1 "Crystal 16Mhz" H 4600 2177 50  0000 C CNN
+F 2 "" H 4600 2000 50  0001 C CNN
+F 3 "~" H 4600 2000 50  0001 C CNN
+	1    4600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60EDF404
+P 4450 2200
+F 0 "C2" H 4565 2246 50  0000 L CNN
+F 1 "22nF" H 4565 2155 50  0000 L CNN
+F 2 "" H 4488 2050 50  0001 C CNN
+F 3 "~" H 4450 2200 50  0001 C CNN
+	1    4450 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60EE06F7
+P 4750 2200
+F 0 "C3" H 4865 2246 50  0000 L CNN
+F 1 "22nF" H 4865 2155 50  0000 L CNN
+F 2 "" H 4788 2050 50  0001 C CNN
+F 3 "~" H 4750 2200 50  0001 C CNN
+	1    4750 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2050 4750 2000
+Wire Wire Line
+	4450 2050 4450 2000
+Wire Wire Line
+	4450 2000 4050 2000
+Connection ~ 4450 2000
+Wire Wire Line
+	4750 2000 4750 1700
+Wire Wire Line
+	4750 1700 4300 1700
+Wire Wire Line
+	4300 1700 4300 2100
+Wire Wire Line
+	4300 2100 4050 2100
+Connection ~ 4750 2000
+$Comp
+L power:GND #PWR?
+U 1 1 60EED64B
+P 4450 2350
+F 0 "#PWR?" H 4450 2100 50  0001 C CNN
+F 1 "GND" H 4455 2177 50  0000 C CNN
+F 2 "" H 4450 2350 50  0001 C CNN
+F 3 "" H 4450 2350 50  0001 C CNN
+	1    4450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60EEDA19
+P 4750 2350
+F 0 "#PWR?" H 4750 2100 50  0001 C CNN
+F 1 "GND" H 4755 2177 50  0000 C CNN
+F 2 "" H 4750 2350 50  0001 C CNN
+F 3 "" H 4750 2350 50  0001 C CNN
+	1    4750 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1400 1400 1400
+Wire Wire Line
+	1350 1100 1600 1100
+Wire Wire Line
+	1150 1100 1350 1100
+Connection ~ 1350 1100
+$Comp
+L Device:CP C1
+U 1 1 60ECB3FC
+P 1350 1250
+F 0 "C1" H 1468 1296 50  0000 L CNN
+F 1 "100uF" H 1468 1205 50  0000 L CNN
+F 2 "" H 1388 1100 50  0001 C CNN
+F 3 "~" H 1350 1250 50  0001 C CNN
+	1    1350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U2
+U 1 1 60ECA711
+P 1900 1100
+F 0 "U2" H 1900 1342 50  0000 C CNN
+F 1 "L7805" H 1900 1251 50  0000 C CNN
+F 2 "" H 1925 950 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 1900 1050 50  0001 C CNN
+	1    1900 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60EF7574
+P 3450 4100
+F 0 "#PWR?" H 3450 3850 50  0001 C CNN
+F 1 "GND" H 3455 3927 50  0000 C CNN
+F 2 "" H 3450 4100 50  0001 C CNN
+F 3 "" H 3450 4100 50  0001 C CNN
+	1    3450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60EF825E
+P 1400 1400
+F 0 "#PWR?" H 1400 1150 50  0001 C CNN
+F 1 "GND" H 1405 1227 50  0000 C CNN
+F 2 "" H 1400 1400 50  0001 C CNN
+F 3 "" H 1400 1400 50  0001 C CNN
+	1    1400 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 1400
+Wire Wire Line
+	1400 1400 1900 1400
+Wire Wire Line
+	600  1150 850  1150
+Wire Wire Line
+	850  1150 850  1100
+$Comp
+L power:GND #PWR?
+U 1 1 60EF8D74
+P 1950 1950
+F 0 "#PWR?" H 1950 1700 50  0001 C CNN
+F 1 "GND" H 1955 1777 50  0000 C CNN
+F 2 "" H 1950 1950 50  0001 C CNN
+F 3 "" H 1950 1950 50  0001 C CNN
+	1    1950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 60EF9729
+P 2100 1950
+F 0 "C4" V 1845 1950 50  0000 C CNN
+F 1 "10uF" V 1936 1950 50  0000 C CNN
+F 2 "" H 2138 1800 50  0001 C CNN
+F 3 "~" H 2100 1950 50  0001 C CNN
+	1    2100 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 1950 2250 1400
+Wire Wire Line
+	2250 1400 2550 1400
+Wire Wire Line
+	2550 1400 2550 1100
+Wire Wire Line
+	2550 1000 3450 1000
+Wire Wire Line
+	3450 1000 3450 1100
+Connection ~ 2550 1400
+Wire Wire Line
+	2550 1400 2850 1400
+Wire Wire Line
+	3450 1000 3550 1000
+Wire Wire Line
+	3550 1000 3550 1100
+Connection ~ 3450 1000
+Wire Wire Line
+	2200 1100 2550 1100
+Connection ~ 2550 1100
+Wire Wire Line
+	2550 1100 2550 1000
+$Comp
+L Device:R R1
+U 1 1 60EFC2D0
+P 2700 800
+F 0 "R1" V 2493 800 50  0000 C CNN
+F 1 "10k" V 2584 800 50  0000 C CNN
+F 2 "" V 2630 800 50  0001 C CNN
+F 3 "~" H 2700 800 50  0001 C CNN
+	1    2700 800 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 1000 2550 800 
+Connection ~ 2550 1000
+Wire Wire Line
+	2850 800  4250 800 
+Wire Wire Line
+	4250 800  4250 2900
+Wire Wire Line
+	4250 2900 4050 2900
+$EndSCHEMATC
